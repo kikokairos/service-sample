@@ -1,5 +1,9 @@
-package br.edu.ifpb.bean;
+package br.edu.ifpb.bean.ex;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
+//bean ok
+@XStreamAlias("Telefones")
 public class Telefone {
 	private int id;
     private int ddd;

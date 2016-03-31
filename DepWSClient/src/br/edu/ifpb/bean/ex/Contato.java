@@ -1,13 +1,21 @@
-package br.edu.ifpb.bean;
+package br.edu.ifpb.bean.ex;
 
 import java.util.ArrayList;
 import java.util.Collection;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
+//bean ok
+@XStreamAlias("Contato")
 public class Contato {
 	private int id;
     private String nome;
     private String email;
+    
+    @XStreamAlias("Endereco")
     private Endereco endereco;
+    
+    @XStreamAlias("Telefones")
     private Collection<Telefone> telefones = new ArrayList<Telefone>();
 	public int getId() {
 		return id;
